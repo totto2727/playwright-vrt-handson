@@ -1,0 +1,43 @@
+name: Playwright Updates
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    timeout-minutes: 600
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install CJK Font
+        run: apt-get install fonts-noto
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Update Playwright tests
+        run: npx playwright test
+
+      - name: Commit ScreenShot
+        run: |
+          set -x
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m "test: update screenshots. ${GITHUB_REF##*/}"
+
+      - name: Push to remote branch
+        run: git push origin update-screenshots/${GITHUB_REF##*/}
+
+      # 対象のブランチへ画像を更新したブランチからPRを発行
+      - name: Create PR
+        run: gh pr create --base ${GITHUB_REF##*/} --head update-screenshots/${GITHUB_REF##*/} --title "update-screenshots ${GITHUB_REF##*/}" --body "" --label "test"

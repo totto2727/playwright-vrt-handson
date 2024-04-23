@@ -45,7 +45,6 @@ html,body {
 
 
 body {
-	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
 	-webkit-text-size-adjust: none;
 	background: #fefefe;	/*背景色*/
 	color: #696a6a;		/*文字色*/

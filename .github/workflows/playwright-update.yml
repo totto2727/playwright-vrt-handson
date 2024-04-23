@@ -34,4 +34,4 @@ jobs:
 
       # 対象のブランチへ画像を更新したブランチからPRを発行
       - name: Create PR
-        run: gh pr create --base ${GITHUB_REF} --head update-screenshots/${GITHUB_REF} --title "update-screenshots ${GITHUB_REF}" --body "" --label "test"
+        run: gh pr create --base ${GITHUB_REF} --head update-screenshots/${GITHUB_REF} --title "update-screenshots ${GITHUB_REF}" --body ""

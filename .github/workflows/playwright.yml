@@ -9,8 +9,11 @@ jobs:
   test:
     timeout-minutes: 600
     # runs-on: windows-latest
-    runs-on: macos-latest
     # runs-on: ubuntu-latest
+    # M1組み込みのmacOSユーザ
+    runs-on: macos-14
+    # Intel組み込みのmacOSユーザ
+    # runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

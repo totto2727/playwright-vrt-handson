@@ -11,9 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install CJK Font
-        run: sudo apt-get update && sudo apt-get install fonts-noto
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20

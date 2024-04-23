@@ -19,11 +19,6 @@ export default defineConfig({
     trace: "on-first-retry",
   },
   // Matcherのグローバル設定
-  expect: {
-    // toHaveScreenshot: {
-    //   maxDiffPixelRatio: 0.002,
-    // },
-  },
   // テストサーバの自動起動
   webServer: {
     command: "npm run start",

@@ -20,10 +20,9 @@ export default defineConfig({
   },
   // Matcherのグローバル設定
   expect: {
-    toHaveScreenshot: {
-      maxDiffPixelRatio: 0.01,
-      threshold: 0.5,
-    },
+    // toHaveScreenshot: {
+    //   maxDiffPixelRatio: 0.002,
+    // },
   },
   // テストサーバの自動起動
   webServer: {

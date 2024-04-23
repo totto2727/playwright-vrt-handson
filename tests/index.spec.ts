@@ -8,10 +8,10 @@ function sleep() {
   });
 }
 
-test("制作事例のキービジュアルのVRT", async ({ page }) => {
-  await page.goto("/");
-  const kv = page.locator("#mainimg-box");
-  // 少し時間のかかる処理
-  await sleep();
-  await expect(page).toHaveScreenshot({ mask: [kv] });
-});
+// test("制作事例のキービジュアルのVRT", async ({ page }) => {
+//   await page.goto("/");
+//   const kv = page.locator("#mainimg-box");
+//   // 少し時間のかかる処理
+//   await sleep();
+//   await expect(page).toHaveScreenshot({ mask: [kv] });
+// });

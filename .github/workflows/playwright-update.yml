@@ -30,11 +30,8 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
-          git commit -m "test: update screenshots. ${GITHUB_REF##*/}"
-
-      - name: Push to remote branch
-        run: git push origin update-screenshots/${GITHUB_REF##*/}
+          git commit -m "test: update screenshots. ${GITHUB_REF}"
 
       # 対象のブランチへ画像を更新したブランチからPRを発行
       - name: Create PR
-        run: gh pr create --base ${GITHUB_REF##*/} --head update-screenshots/${GITHUB_REF##*/} --title "update-screenshots ${GITHUB_REF##*/}" --body "" --label "test"
+        run: gh pr create --base ${GITHUB_REF} --head update-screenshots/${GITHUB_REF} --title "update-screenshots ${GITHUB_REF}" --body "" --label "test"

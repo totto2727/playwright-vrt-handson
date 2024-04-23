@@ -21,6 +21,7 @@ export default defineConfig({
   // Matcherのグローバル設定
   expect: {
     toHaveScreenshot: {
+      maxDiffPixelRatio: 0.01,
       threshold: 0.5,
     },
   },

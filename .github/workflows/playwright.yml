@@ -9,7 +9,7 @@ jobs:
   test:
     timeout-minutes: 600
     # runs-on: windows-latest
-    runs-on: macos-latest-xlarge
+    runs-on: macos-latest
     # runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

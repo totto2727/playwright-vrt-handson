@@ -22,7 +22,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Update Playwright tests
-        run: npx playwright test
+        run: npx playwright test -u
 
       - name: Commit ScreenShot
         run: |

@@ -30,8 +30,10 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
-          git commit -m "test: update screenshots. ${GITHUB_REF}"
+          git switch -c update-screenshots/${GITHUB_REF_NAME}
+          git commit -m "test: update screenshots. ${GITHUB_REF_NAME}"
+          git push origin update-screenshots/${GITHUB_REF_NAME}
 
       # 対象のブランチへ画像を更新したブランチからPRを発行
       - name: Create PR
-        run: gh pr create --base ${GITHUB_REF} --head update-screenshots/${GITHUB_REF} --title "update-screenshots ${GITHUB_REF}" --body ""
+        run: gh pr create --base ${GITHUB_REF_NAME} --head update-screenshots/${GITHUB_REF_NAME} --title "update-screenshots ${GITHUB_REF_NAME}" --body ""

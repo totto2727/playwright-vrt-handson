@@ -18,6 +18,12 @@ export default defineConfig({
     baseURL: "http://127.0.0.1:3000",
     trace: "on-first-retry",
   },
+  // Matcherのグローバル設定
+  expect: {
+    toHaveScreenshot: {
+      threshold: 0.5,
+    },
+  },
   // テストサーバの自動起動
   webServer: {
     command: "npm run start",

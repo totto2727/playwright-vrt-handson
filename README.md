@@ -1,5 +1,7 @@
 # Playwright VRT Handson
 
+[登壇資料](./docs/登壇資料.pdf)
+
 ## 準備
 
 ### リポジトリの準備

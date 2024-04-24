@@ -36,6 +36,20 @@ export default defineConfig({
       },
     },
     // {
+    //   name: "Galaxy Tab Chrome",
+    //   use: {
+    //     ...devices["Galaxy Tab S4"],
+    //     browserName: "chromium",
+    //   },
+    // },
+    // {
+    //   name: "Android Chrome",
+    //   use: {
+    //     ...devices["Galaxy S8"],
+    //     browserName: "chromium",
+    //   },
+    // },
+    // {
     //   name: "Safari",
     //   use: {
     //     ...devices["Desktop Safari"],
@@ -51,24 +65,10 @@ export default defineConfig({
     //   },
     // },
     // {
-    //   name: "Galaxy Tab Chrome",
-    //   use: {
-    //     ...devices["Galaxy Tab S4"],
-    //     browserName: "chromium",
-    //   },
-    // },
-    // {
     //   name: "iOS Safari",
     //   use: {
     //     ...devices["iPhone 8"],
     //     browserName: "webkit",
-    //   },
-    // },
-    // {
-    //   name: "Android Chrome",
-    //   use: {
-    //     ...devices["Galaxy S8"],
-    //     browserName: "chromium",
     //   },
     // },
   ],

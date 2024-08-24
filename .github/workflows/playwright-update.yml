@@ -32,7 +32,7 @@ jobs:
           git add .
           git switch -c update-screenshots/${GITHUB_REF_NAME}
           git commit -m "test: update screenshots. ${GITHUB_REF_NAME}"
-          git push origin update-screenshots/${GITHUB_REF_NAME}
+          git push --force origin update-screenshots/${GITHUB_REF_NAME}
 
       # 対象のブランチへ画像を更新したブランチからPRを発行
       - name: Create PR
